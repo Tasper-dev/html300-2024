@@ -1,3 +1,50 @@
-h1 {
-  color: dodgerblue;
+@import "variables";
+@import "typography";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
+li a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+// header styles and animation to change colors
+header {
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  background-color: $mainBlue;
+  &:hover {
+    animation: header 1s linear 2 alternate;
+  }
+}
+@keyframes header {
+  0% {
+    background-color: $mainBlue;
+  }
+  25% {
+    // background-color: #5abec0;
+    background-color: #506898;
+  }
+  50% {
+    // background-color: #8e9bd4;
+    background-color: #889d6b;
+  }
+  75% {
+    // background-color: #b7c0e3;
+    background-color: #a1b558;
+  }
+  100% {
+    // background-color: #ffffff;
+    background-color: $accentYellow;
+  }
+}
+footer {
+  padding: 1rem;
+  background-color: $accentYellow;
 }
