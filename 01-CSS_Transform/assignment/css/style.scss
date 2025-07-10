@@ -1,18 +1,27 @@
 @import "variables";
 @import "typography";
 
+//global
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: $font-primary;
 }
-li a {
-  text-decoration: none;
+nav {
+  ul {
+    list-style: none;
+  }
+  li a {
+    text-decoration: none;
+    padding: 0.5rem;
+  }
 }
-ul {
-  list-style: none;
+img {
+  max-width: 100%;
+  display: block;
 }
+
 // header styles and animation to change colors
 header {
   width: 100%;
@@ -44,7 +53,31 @@ header {
     background-color: $accentYellow;
   }
 }
+
+//footer
 footer {
   padding: 1rem;
   background-color: $accentYellow;
+}
+
+//featured projects layout
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  .feature-one,
+  .feature-two,
+  .feature-three {
+    padding: 0.5rem;
+  }
+}
+
+//featured projects transitions
+.feature-one {
+  .img-one {
+    transition: transform 1s ease-in-out 100ms;
+  }
+}
+.feature-one:hover .img-one {
+  transform: translate(20px, 20px);
 }
