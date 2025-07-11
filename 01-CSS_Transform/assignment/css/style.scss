@@ -15,15 +15,20 @@ nav {
   li a {
     text-decoration: none;
     padding: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 // header styles and animation to change colors
 header {
+  position: relative;
   width: 100%;
   height: 15rem;
   padding: 1rem;
@@ -37,20 +42,30 @@ header {
     background-color: $mainBlue;
   }
   25% {
-    // background-color: #5abec0;
     background-color: #506898;
   }
   50% {
-    // background-color: #8e9bd4;
     background-color: #889d6b;
   }
   75% {
-    // background-color: #b7c0e3;
     background-color: #a1b558;
   }
   100% {
-    // background-color: #ffffff;
     background-color: $accentYellow;
+  }
+}
+//logo in header to drop down
+header img {
+  position: absolute;
+  bottom: 0;
+  animation: dropDown 1s ease 500ms forwards;
+}
+@keyframes dropDown {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -63,8 +78,6 @@ footer {
 //featured projects layout
 
 .project-container {
-  display: flex;
-  flex-wrap: wrap;
   .feature-one,
   .feature-two,
   .feature-three {
@@ -72,12 +85,32 @@ footer {
   }
 }
 
-//featured projects transitions
-.feature-one {
-  .img-one {
+//featured projects transitions & animation
+.feature {
+  padding: 2rem;
+  .feat-img {
     transition: transform 1s ease-in-out 100ms;
   }
 }
-.feature-one:hover .img-one {
+.feature:hover .feat-img {
   transform: translate(20px, 20px);
+  animation: feature-images 1s ease-in-out 100ms 2 alternate;
+}
+
+@keyframes feature-images {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+//main content styling
+.intro {
+  padding: 0.5rem;
+}
+
+h3 {
+  padding: 0.5rem;
 }
