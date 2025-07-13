@@ -33,9 +33,7 @@ header {
   height: 15rem;
   padding: 1rem;
   background-color: $mainBlue;
-  &:hover {
-    animation: header 1s linear 2 alternate;
-  }
+  animation: header 1s linear 2 alternate;
 }
 @keyframes header {
   0% {
@@ -54,8 +52,9 @@ header {
     background-color: $accentYellow;
   }
 }
+
 //logo in header to drop down
-header img {
+.main-header__logo {
   position: absolute;
   bottom: 0;
   animation: dropDown 1s ease 500ms forwards;
@@ -75,35 +74,21 @@ footer {
   background-color: $accentYellow;
 }
 
-//featured projects layout
-
-.project-container {
-  .feature-one,
-  .feature-two,
-  .feature-three {
+// featured projects transitions
+.feature {
+  padding: 2rem;
+  background-color: $black;
+  .feature__img {
+    transition: all 1s ease-in-out 100ms;
+  }
+  .feature__title {
+    color: $accentYellow;
     padding: 0.5rem;
   }
 }
-
-//featured projects transitions & animation
-.feature {
-  padding: 2rem;
-  .feat-img {
-    transition: transform 1s ease-in-out 100ms;
-  }
-}
-.feature:hover .feat-img {
+.feature:hover .feature__img {
   transform: translate(20px, 20px);
-  animation: feature-images 1s ease-in-out 100ms 2 alternate;
-}
-
-@keyframes feature-images {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
+  opacity: 0.5;
 }
 
 //main content styling
@@ -111,6 +96,8 @@ footer {
   padding: 0.5rem;
 }
 
-h3 {
-  padding: 0.5rem;
+.intro__title {
+}
+
+.intro__text {
 }
