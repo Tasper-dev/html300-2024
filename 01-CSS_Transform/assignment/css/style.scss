@@ -1,5 +1,6 @@
 @import "variables";
 @import "typography";
+@import "mixins";
 
 //global
 * {
@@ -9,16 +10,7 @@
   font-family: $font-primary;
 }
 nav {
-  ul {
-    list-style: none;
-  }
-  li a {
-    text-decoration: none;
-    padding: 0.5rem;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+  @include nav-links;
 }
 img {
   max-width: 100%;
@@ -70,7 +62,31 @@ header {
     transform: translateY(0);
   }
 }
-
+.ball {
+  height: 50px;
+  width: 50px;
+  background-color: darkorange;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce-roll 2s;
+}
+@keyframes bounce-roll {
+  0% {
+    transform: translateY(-100px);
+  }
+  25% {
+    transform: translateY(150px);
+  }
+  50% {
+    transform: translate(50px, 50px);
+  }
+  // 75% {
+  //   transform: translateX(25px);
+  // }
+  100% {
+    transform: translate(200px, 150px);
+  }
+}
 //footer
 footer {
   padding: 1rem;
