@@ -33,7 +33,7 @@ header {
   height: 15rem;
   padding: 1rem;
   background-color: $mainBlue;
-  animation: header 1s linear 2 alternate;
+  animation: header 1s linear 500ms 2 alternate;
 }
 @keyframes header {
   0% {
@@ -57,11 +57,14 @@ header {
 .main-header__logo {
   position: absolute;
   bottom: 0;
-  animation: dropDown 1s ease 500ms forwards;
+  animation: dropDown 1.5s ease 500ms forwards;
 }
 @keyframes dropDown {
   0% {
     transform: translateY(-200px);
+  }
+  75% {
+    scale: 1.5;
   }
   100% {
     transform: translateY(0);
@@ -78,10 +81,10 @@ footer {
 .feature {
   padding: 2rem;
   background-color: $black;
-  .feature__img {
+  &__img {
     transition: all 1s ease-in-out 100ms;
   }
-  .feature__title {
+  &__title {
     color: $accentYellow;
     padding: 0.5rem;
   }
@@ -94,10 +97,4 @@ footer {
 //main content styling
 .intro {
   padding: 0.5rem;
-}
-
-.intro__title {
-}
-
-.intro__text {
 }
