@@ -2,7 +2,7 @@
 @import "typography";
 @import "mixins";
 
-//global
+/* global */
 * {
   padding: 0;
   margin: 0;
@@ -18,7 +18,7 @@ img {
   object-fit: cover;
 }
 
-// header styles and animation to change colors
+/* header styles and animation to change colors */
 header {
   position: relative;
   width: 100%;
@@ -45,7 +45,7 @@ header {
   }
 }
 
-//logo in header to drop down
+/* logo in header to drop down */
 .main-header__logo {
   position: absolute;
   bottom: 0;
@@ -62,38 +62,41 @@ header {
     transform: translateY(0);
   }
 }
+
+/* ball bounce and roll animation */
 .ball {
   height: 50px;
   width: 50px;
   background-color: darkorange;
   border-radius: 50%;
   position: relative;
-  animation: bounce-roll 2s;
+  animation: bounce-roll 3s ease-in 500ms forwards;
 }
+
 @keyframes bounce-roll {
   0% {
     transform: translateY(-100px);
   }
-  25% {
+  20% {
     transform: translateY(150px);
   }
-  50% {
-    transform: translate(50px, 50px);
+  40% {
+    transform: translateX(50px) translateY(100px);
   }
-  // 75% {
-  //   transform: translateX(25px);
-  // }
+  60% {
+    transform: translateX(75px) translateY(150px);
+  }
   100% {
-    transform: translate(200px, 150px);
+    transform: translateX(1000px) translateY(150px);
   }
 }
-//footer
+/* footer */
 footer {
   padding: 1rem;
   background-color: $accentYellow;
 }
 
-// featured projects transitions
+/* featured projects transitions */
 .feature {
   padding: 2rem;
   background-color: $black;
@@ -110,7 +113,10 @@ footer {
   opacity: 0.5;
 }
 
-//main content styling
+/* main content styling */
 .intro {
+  padding: 0.5rem;
+}
+h3 {
   padding: 0.5rem;
 }
