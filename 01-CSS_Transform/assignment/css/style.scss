@@ -1,3 +1,122 @@
-h1 {
-  color: dodgerblue;
+@import "variables";
+@import "typography";
+@import "mixins";
+
+/* global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
+nav {
+  @include nav-links;
+}
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* header styles and animation to change colors */
+header {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  padding: 1rem;
+  background-color: $mainBlue;
+  animation: header 1s linear 500ms 2 alternate;
+}
+@keyframes header {
+  0% {
+    background-color: $mainBlue;
+  }
+  25% {
+    background-color: #506898;
+  }
+  50% {
+    background-color: #889d6b;
+  }
+  75% {
+    background-color: #a1b558;
+  }
+  100% {
+    background-color: $accentYellow;
+  }
+}
+
+/* logo in header to drop down */
+.main-header__logo {
+  position: absolute;
+  bottom: 0;
+  animation: dropDown 1.5s ease 500ms forwards;
+}
+@keyframes dropDown {
+  0% {
+    transform: translateY(-200px);
+  }
+  75% {
+    scale: 1.5;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ball bounce and roll animation */
+.ball {
+  height: 50px;
+  width: 50px;
+  background-color: darkorange;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce-roll 3s ease-in 500ms forwards;
+}
+
+@keyframes bounce-roll {
+  0% {
+    transform: translateY(-100px);
+  }
+  20% {
+    transform: translateY(150px);
+  }
+  40% {
+    transform: translateX(50px) translateY(100px);
+  }
+  60% {
+    transform: translateX(75px) translateY(150px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(150px);
+  }
+}
+/* footer */
+footer {
+  padding: 1rem;
+  background-color: $accentYellow;
+}
+
+/* featured projects transitions */
+.feature {
+  padding: 2rem;
+  background-color: $black;
+  &__img {
+    transition: all 1s ease-in-out 100ms;
+  }
+  &__title {
+    color: $accentYellow;
+    padding: 0.5rem;
+  }
+}
+.feature:hover .feature__img {
+  transform: translate(20px, 20px);
+  opacity: 0.5;
+}
+
+/* main content styling */
+.intro {
+  padding: 0.5rem;
+}
+h3 {
+  padding: 0.5rem;
 }
