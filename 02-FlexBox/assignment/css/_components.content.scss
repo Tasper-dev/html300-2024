@@ -2,6 +2,14 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+  img {
+    display: block;
+  }
+}
+
 *,
 *:after,
 *:before {
@@ -9,7 +17,6 @@ html {
 }
 
 .container {
-  padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
@@ -31,16 +38,38 @@ html {
 }
 .head {
   grid-area: header;
+  background-color: $deepBlue;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  &-link {
+    color: $yellow;
+    padding: 2rem;
+  }
 }
 .nav {
   grid-area: nav;
+  @include navbar-links;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .intro-article {
   grid-area: article;
+  padding: 2rem;
 }
 .side {
   grid-area: side-bar;
+  padding: 2rem;
 }
 .footer {
   grid-area: footer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &-nav {
+    @include navbar-links;
+  }
 }

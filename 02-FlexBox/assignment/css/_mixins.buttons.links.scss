@@ -1,0 +1,14 @@
+@mixin navbar-links {
+  ul {
+    list-style: none;
+  }
+  li a {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: $black;
+    &:hover {
+      cursor: pointer;
+      color: $deepBlue;
+    }
+  }
+}
