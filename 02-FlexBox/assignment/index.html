@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/fab87b9ac1.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Assignment 05 - CSS Grid</title>
   </head>
   <body>
     <main class="container">
       <header class="head">
-        <img src="/images/renegade-electric-logo-250.png" alt="" />
+        <img
+          class="head-logo"
+          src="/images/white-plug-renegade-electric-logo.png"
+          alt=""
+          width="500"
+          height="500"
+        />
         <a href="#" class="head-link">Call Now</a>
       </header>
       <nav class="nav">
@@ -23,49 +33,59 @@
         </ul>
       </nav>
       <article class="intro-article">
-        <h1>We're Wired Different</h1>
-        <p>
+        <h1 class="intro-article-title">We're Wired Different</h1>
+        <p class="intro-article-content">
           Certified Electrician with 20 years of experience in residential and
           commercial projects. Lorem ipsum dolor sit amet consectetur
           adipisicing elit. Fugit veritatis, est tempore natus sit pariatur
           possimus exercitationem labore soluta non commodi quibusdam, ipsam
           quisquam temporibus voluptatum nemo ab placeat hic.
         </p>
-        <blockquote>
+        <blockquote class="intro-article-quote">
           No job too small!<br />
           Competitive pricing!<br />
           Flexible scheduling!
         </blockquote>
-        <a href="#">Free Quote</a>
+        <a href="#" class="intro-article-link">Free Quote</a>
       </article>
       <aside class="side">
-        <h2>Services</h2>
-        <ul>
-          <li>Diagnostic & Repair</li>
-          <li>Panel & Service Upgrades</li>
-          <li>New Circuit Installs</li>
-          <li>EV Charging</li>
-          <li>Remodeling</li>
+        <h2 class="side-title">Services</h2>
+        <ul class="side-list">
+          <li class="side-list-item">Diagnostic & Repair</li>
+          <li class="side-list-item">Panel & Service Upgrades</li>
+          <li class="side-list-item">New Circuit Installs</li>
+          <li class="side-list-item">EV Charging</li>
+          <li class="side-list-item">Remodeling</li>
         </ul>
       </aside>
       <footer class="footer">
         <img src="images/plain-renegade-electric-logo-250.png" alt="" />
         <nav class="footer-nav">
           <ul class="footer-nav-list">
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item">
+            <li class="footer-nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="footer-nav-item">
               <a href="#" class="nav-link">Residential</a>
             </li>
-            <li class="nav-item">
+            <li class="footer-nav-item">
               <a href="#" class="nav-link">Commercial</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="footer-nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
           </ul>
         </nav>
         <div class="socials">
-          <a href="#">Facebook icon</a>
-          <a href="#">Insta icon</a>
+          <a href="#" class="socials-link"
+            ><i class="fa-brands fa-square-facebook fa-3x"></i
+          ></a>
+          <a href="#" class="socials-link"
+            ><i class="fa-brands fa-square-instagram fa-3x"></i
+          ></a>
         </div>
       </footer>
     </main>
