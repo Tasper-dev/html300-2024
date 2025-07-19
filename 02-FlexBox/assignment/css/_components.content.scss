@@ -7,8 +7,9 @@ body {
   margin: 0;
   img {
     display: block;
+    max-width: 100%;
   }
-  font-family: $fontFam;
+  font-family: $font-fam;
 }
 
 *,
@@ -31,7 +32,7 @@ body {
     "side-bar"
     "footer";
   @include media-query("tab") {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     grid-template-areas:
       "header header header"
       "nav nav nav"
@@ -47,14 +48,16 @@ body {
   background-size: cover;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-end;
-
+  justify-content: space-between;
   &-link {
     color: $yellow;
     padding: 3rem;
     font-size: 2rem;
     &:hover {
-      color: white;
+      color: $deep-blue;
+    }
+    @include media-query("mobile") {
+      display: none;
     }
   }
 }
@@ -69,6 +72,9 @@ body {
     @include media-query("mobile") {
       display: block;
     }
+  }
+  &-item {
+    padding: 0.5rem;
   }
 }
 .intro-article {
@@ -85,9 +91,10 @@ body {
     font-size: 2rem;
     color: $black;
     background-color: $yellow;
+    border-radius: 5%;
     padding: 1rem;
     &:hover {
-      color: $deepBlue;
+      color: $deep-blue;
     }
   }
   &-content {
@@ -119,10 +126,19 @@ body {
     padding: 0.5rem;
   }
 }
+
+/* Icon Styling */
 .socials-link {
-  color: $deepBlue;
+  color: $deep-blue;
   padding-right: 1rem;
   &:hover {
     color: $yellow;
   }
+}
+.fa-square-check {
+  color: $deep-blue;
+  padding: 0.5rem;
+}
+.fa-square-phone {
+  padding: 0.5rem;
 }
