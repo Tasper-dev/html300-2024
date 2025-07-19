@@ -1,6 +1,7 @@
 // Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
-
+@import "mixins.buttons.links";
+@import "base.normalize";
+@import "settings.variables";
+@import "settings.responsive";
+@import "components.content";
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
