@@ -1,6 +1,13 @@
 // Import partials here
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+@import "base.normalize";
+@import "settings.variables";
+@import "typography";
+@import "settings.responsive";
+@import "components.content";
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

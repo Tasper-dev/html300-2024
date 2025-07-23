@@ -15,21 +15,21 @@
   </head>
   <body>
     <main class="main">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">NW Chickens</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#mainNav"
+            aria-controls="mainNavigation"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -58,7 +58,140 @@
           </div>
         </div>
       </nav>
-      <footer></footer>
+
+      <header class="header container-fluid bg-success">
+        <h1 class="display-1">NW Chickens</h1>
+        <h2>Girls gone wild!</h2>
+      </header>
+
+      <div id="homeCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/chicken-carousel-one.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/chicken-carousel-two.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/chicken-carousel-three.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section class="container p-2 my-5">
+        <div class="row">
+          <article class="col-xl-10 col-lg-8 col-sm-6 col-12">
+            <h2>Intro Article</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              est cupiditate veritatis molestiae deleniti, voluptate perferendis
+              perspiciatis eos consequatur nulla, in exercitationem
+              reprehenderit? Velit sit doloribus delectus quasi quod eius?Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Sapiente quia
+              molestias architecto vero quo? Possimus fugit accusantium
+              similique, sapiente obcaecati laboriosam quo? Numquam ex accusamus
+              officia? Vero distinctio nulla beatae.
+            </p>
+            <h4>Steps to getting your own brood:</h4>
+            <ol>
+              <li>
+                Coops and Runs for your area weather conditions.<a href=""
+                  > Coops & Runs</a
+                >
+              </li>
+              <li>Best breeds for the NW.<a href=""> Breeds</a></li>
+              <li>
+                Source best feed that supplies what your ladies need.<a href=""></a>
+                  Feeds</a
+                >
+              </li>
+              <li>
+                Predators: what you need to know!<a href=""> Predators</a>
+              </li>
+              <li>
+                Connect with other Chicken Lovers<a href="">
+                  List of local groups</a
+                >
+              </li>
+              
+            </ol>
+          </article>
+          <aside class="col-xl-2 col-lg-4 col-sm-6 col-12">
+            <h3>New Breeds</h3>
+            <img
+              src="images/chicken-thumbnail-350.jpg"
+              class="img-thumbnail"
+              alt=""
+            />
+            <img
+              src="images/chicken-thumbnail-350.jpg"
+              class="img-thumbnail"
+              alt=""
+            />
+            <img
+              src="images/chicken-thumbnail-350.jpg"
+              class="img-thumbnail"
+              alt=""
+            />
+          </aside>
+        </div>
+
+        <article>
+          <h2>Latest Poultry News</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error
+            exercitationem amet, reiciendis delectus illum at ducimus
+            reprehenderit qui facilis iusto consectetur, voluptas natus aut vel
+            deserunt est. Est, natus!Lorem
+          </p>
+        </article>
+      </section>
+      <footer class="footer bg-body-tertiary">
+        <p class="footer-brand h3">NW Chickens</p>
+        <div>
+          <ul class="footer-links list-unstyled">
+            <li><a class="text-decoration-none" href="#">Home</a></li>
+            <li><a class="text-decoration-none" href="#">Breeds</a></li>
+            <li><a class="text-decoration-none" href="#">Feeds</a></li>
+            <li><a class="text-decoration-none" href="#">Coops & Runs</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="socials list-unstyled">
+            <li><a href="#">Facebook icon</a></li>
+            <li><a href="#">Instagram-icon</a></li>
+          </ul>
+        </div>
+      </footer>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
