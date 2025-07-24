@@ -1,9 +1,13 @@
 // Import partials here
 @import "base.normalize";
 @import "settings.variables";
-@import "typography";
 @import "settings.responsive";
 @import "components.content";
+
+img {
+  max-width: 100%;
+  display: block;
+}
 
 .footer {
   display: flex;
