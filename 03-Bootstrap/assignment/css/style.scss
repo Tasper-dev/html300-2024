@@ -15,3 +15,10 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.accordion {
+  --bs-accordion-btn-bg: #a9efce;
+  --bs-accordion-active-bg: #198754;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
