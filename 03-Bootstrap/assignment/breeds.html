@@ -5,33 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Assignment 06 - Bootstrap 4</title>
+    <title>Assignment 03 - Bootstrap</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/fab87b9ac1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <main class="main">
+      <!-- //* Navbar that collapses *// -->
       <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">NW Chickens</a>
+          <a class="navbar-brand" href="#"
+            ><img
+              src="images/nw-chickens-rect-logo-150.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="150"
+              height="90"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mainNav"
-            aria-controls="mainNavigation"
+            aria-controls="mainNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
@@ -69,6 +81,8 @@
         <h1 class="display-1">NW Chickens</h1>
         <h2>Breeds A-Z</h2>
       </header>
+
+      <!-- //* Grid Content: Responsive Images*// -->
       <section class="container my-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
@@ -188,26 +202,58 @@
         </div>
       </section>
 
-      <footer class="footer bg-body-tertiary p-3">
-        <p class="h3">NW Chickens</p>
+      <footer class="footer bg-body-tertiary p-5">
+        <img
+          src="images/nw-chickens-rect-logo-250.jpg"
+          class="img-thumbnail"
+          alt=""
+          width="250"
+          height="150"
+        />
         <div>
           <ul class="list-unstyled">
-            <li><a class="text-decoration-none" href="index.html">Home</a></li>
             <li>
-              <a class="text-decoration-none" href="coops-runs.html"
+              <a
+                href="index.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="coops-runs.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
                 >Coops & Runs</a
               >
             </li>
             <li>
-              <a class="text-decoration-none" href="breeds.html">Breeds</a>
+              <a
+                href="breeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Breeds</a
+              >
             </li>
-            <li><a class="text-decoration-none" href="feeds.html">Feeds</a></li>
+            <li>
+              <a
+                href="feeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Feeds</a
+              >
+            </li>
           </ul>
         </div>
         <div>
-          <ul class="list-unstyled">
-            <li><a href="#">Facebook icon</a></li>
-            <li><a href="#">Instagram-icon</a></li>
+          <ul class="socials list-unstyled">
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-facebook fa-2xl"></i
+              ></a>
+            </li>
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
           </ul>
         </div>
       </footer>
