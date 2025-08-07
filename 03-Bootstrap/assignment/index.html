@@ -1,15 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Assignment 03 - Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/fab87b9ac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- //* Navbar that collapses *// -->
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="images/nw-chickens-rect-logo-150.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="150"
+              height="90"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="coops-runs.html">Coops & Runs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="breeds.html">Breeds</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feeds.html">Feeds</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <header class="header container-fluid bg-success p-3">
+        <h1 class="display-1">NW Chickens</h1>
+        <h2>Girls gone wild!</h2>
+      </header>
+
+      <!-- //*Carousel*// -->
+      <div id="homeCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/chicken-carousel-one.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/chicken-carousel-two.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/chicken-carousel-three.jpg"
+              class="d-block w-100"
+              alt="chickens"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#homeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- //* Grid Content*// -->
+      <div class="container-fluid my-3">
+        <div class="row">
+          <article
+            class="col-xl-10 col-lg-8 col-sm-6 col-12 bg-body-tertiary my-3 p-3"
+          >
+            <h2>Intro Article</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+              est cupiditate veritatis molestiae deleniti, voluptate perferendis
+              perspiciatis eos consequatur nulla, in exercitationem
+              reprehenderit? Velit sit doloribus delectus quasi quod eius?Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Sapiente quia
+              molestias architecto vero quo? Possimus fugit accusantium
+              similique, sapiente obcaecati laboriosam quo? Numquam ex accusamus
+              officia? Vero distinctio nulla beatae.
+            </p>
+            <br /><br />
+            <h4>Steps to getting your own brood:</h4>
+            <ol>
+              <li>
+                Coops and Runs for your area weather conditions.<a
+                  href="#"
+                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >
+                  Coops & Runs</a
+                >
+              </li>
+              <li>
+                Best breeds for the NW.<a
+                  href="#"
+                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >
+                  Breeds</a
+                >
+              </li>
+              <li>
+                Source best feed that supplies what your ladies need.<a
+                  href="#"
+                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Feeds</a
+                >
+              </li>
+              <li>
+                Predators: what you need to know!<a
+                  href="#"
+                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >
+                  Predators</a
+                >
+              </li>
+              <li>
+                Connect with other Chicken Lovers<a
+                  href="#"
+                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >
+                  List of local groups</a
+                >
+              </li>
+            </ol>
+            <img
+              src="images/chickens-grazing-700.jpg"
+              class="img-fluid py-5"
+              alt="chickens grazing"
+              width="700"
+              height="467"
+            />
+          </article>
+          <aside class="my-3 col-xl-2 col-lg-4 col-sm-6 col-12">
+            <h3>New Breeds</h3>
+            <div class="card">
+              <img
+                src="images/chicken-thumbnail-350.jpg"
+                class="img-thumbnail"
+                alt="chicken"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Rerum voluptas itaque enim quas praesentium porro sapiente
+                  quod, quibusdam molestias repudiandae.
+                </p>
+                <a
+                  href="#"
+                  class="card-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Sapphire Jewel</a
+                >
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="images/chicken-thumbnail-350.jpg"
+                class="img-thumbnail"
+                alt="chicken"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Rerum voluptas itaque enim quas praesentium porro sapiente
+                  quod, quibusdam molestias repudiandae.
+                </p>
+                <a
+                  href="#"
+                  class="card-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Seramas</a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="images/chicken-thumbnail-350.jpg"
+                class="img-thumbnail"
+                alt="chicken"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Rerum voluptas itaque enim quas praesentium porro sapiente
+                  quod, quibusdam molestias repudiandae.
+                </p>
+                <a
+                  href="#"
+                  class="card-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                  >Wheaten Olive Egger</a
+                >
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- //* Tooltip in this article *// -->
+        <article class="bg-body-tertiary p-3">
+          <h2>Latest Poultry News</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error
+            exercitationem amet, reiciendis delectus illum at ducimus
+            reprehenderit qui facilis iusto consectetur, voluptas natus aut vel
+            deserunt est. Est, natus! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aperiam, eos! Optio aliquid veniam unde,
+            reprehenderit vero maiores!
+            <a
+              href="#"
+              data-bs-toggle="tooltip"
+              data-bs-title="Link takes you offsite"
+              >Chicken Flu</a
+            >
+            This is now just filler, no killer. Content placed here just to
+            mimic the presence of
+            <a
+              href="#"
+              data-bs-toggle="tooltip"
+              data-bs-title="Link opens in a new tab"
+              >Poultry Vitamins</a
+            >Neque ducimus, officiis fugit sit, non dolorum blanditiis nulla
+            ipsa voluptates magnam quas!
+          </p>
+        </article>
+      </div>
+
+      <footer class="footer bg-body-tertiary p-5">
+        <img
+          src="images/nw-chickens-rect-logo-250.jpg"
+          class="img-thumbnail"
+          alt=""
+          width="250"
+          height="150"
+        />
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <a
+                href="index.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="coops-runs.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Coops & Runs</a
+              >
+            </li>
+            <li>
+              <a
+                href="breeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Breeds</a
+              >
+            </li>
+            <li>
+              <a
+                href="feeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Feeds</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="socials list-unstyled">
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-facebook fa-2xl"></i
+              ></a>
+            </li>
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
 </html>

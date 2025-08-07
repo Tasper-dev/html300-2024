@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Assignment 03 - Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/fab87b9ac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- //*Navbar that collapses*// -->
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="images/nw-chickens-rect-logo-150.jpg"
+              class="img-thumbnail"
+              alt=""
+              width="150"
+              height="90"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="coops-runs.html"
+                  >Coops & Runs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="breeds.html">Breeds</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feeds.html">Feeds</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <header class="header container-fluid bg-success p-3">
+        <h1 class="display-1">NW Chickens</h1>
+        <h2>Coops & Runs</h2>
+      </header>
+
+      <!-- //* Grid Content *// -->
+      <div class="container my-5">
+        <div class="row mb-4 justify-content-start">
+          <article class="col-xl-6 col-md-8 col-sm-10 col-12 bg-body-tertiary">
+            <h3>What to Know</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              ab incidunt, officia adipisci aliquam quos a est totam voluptate
+              et voluptas, sunt soluta ad voluptates deleniti atque nemo autem.
+              Maiores.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              maiores amet itaque deserunt, ad voluptatem cupiditate quam
+              suscipit. Reiciendis at expedita porro, vero delectus odio nobis
+              sapiente corrupti a. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Explicabo sit velit quasi qui aspernatur vero,
+              reprehenderit, magni accusantium laudantium placeat quos, animi
+              facere nobis ullam amet earum similique consectetur sed?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Assumenda ipsum necessitatibus neque doloremque autem vel corporis
+              repudiandae. Doloremque ratione, culpa asperiores modi corrupti
+              eligendi exercitationem. Temporibus at nostrum laborum dolores.
+            </p>
+          </article>
+        </div>
+        <div class="row mb-4 justify-content-center">
+          <article class="col-xl-6 col-md-8 col-sm-10 col-12 bg-body-tertiary">
+            <h3>Size & Space</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              recusandae nostrum ad nam animi est porro, similique voluptas
+              cupiditate, unde libero officia, atque voluptatibus iure rerum
+              veritatis quis voluptatum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quod temporibus veritatis quis alias modi a odio
+              labore quia ullam. Voluptatibus modi fugiat voluptates soluta quo
+              est laborum excepturi illum tenetur.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+              voluptates veniam accusantium repudiandae ullam debitis dicta sed
+              eveniet unde. Cumque quae quaerat ullam nam, dolore iure beatae
+              adipisci officiis nulla.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui ad
+              doloribus, consequatur, magnam saepe adipisci deleniti nostrum vel
+              corrupti dicta ab quo cupiditate officiis ut inventore amet,
+              libero ipsam totam? Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Nam molestiae ratione, ipsum quasi cumque natus
+              vel debitis laudantium nihil. Aperiam laboriosam facilis labore
+              amet sit hic distinctio illo vitae minus.
+            </p>
+          </article>
+        </div>
+        <div class="row mb-4 justify-content-end">
+          <article class="col-xl-6 col-md-8 col-sm-10 col-12 bg-body-tertiary">
+            <h3>Protection & Security</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae mollitia assumenda, iste iure sit saepe quaerat hic et
+              officia soluta cumque fugit explicabo ipsam dignissimos aliquid
+              omnis aliquam illo aspernatur! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Alias quaerat beatae cupiditate
+              laboriosam harum necessitatibus, excepturi dolore. Sapiente,
+              pariatur minus id molestiae molestias obcaecati aperiam magni unde
+              ipsam quod quae.
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate, illum laboriosam non magni nam adipisci reiciendis.
+              Adipisci reiciendis quibusdam sapiente illum vitae repudiandae
+              officiis, ullam quisquam quaerat molestiae id tenetur?
+            </p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+              corporis sit rem praesentium eveniet officia explicabo impedit
+              delectus illum numquam, excepturi voluptatibus nesciunt
+              consequuntur autem consectetur magnam rerum ducimus natus! Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Optio sapiente
+              possimus maiores perspiciatis veniam ipsam magni beatae eaque
+              reprehenderit, magnam, aspernatur atque minus cupiditate soluta
+              fuga inventore, exercitationem voluptatibus ex!
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <footer class="footer bg-body-tertiary p-5">
+        <img
+          src="images/nw-chickens-rect-logo-250.jpg"
+          class="img-thumbnail"
+          alt=""
+          width="250"
+          height="150"
+        />
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <a
+                href="index.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="coops-runs.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Coops & Runs</a
+              >
+            </li>
+            <li>
+              <a
+                href="breeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Breeds</a
+              >
+            </li>
+            <li>
+              <a
+                href="feeds.html"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                >Feeds</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="socials list-unstyled">
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-facebook fa-2xl"></i
+              ></a>
+            </li>
+            <li class="py-3">
+              <a href="#" class="link-success"
+                ><i class="fa-brands fa-instagram fa-2xl"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
