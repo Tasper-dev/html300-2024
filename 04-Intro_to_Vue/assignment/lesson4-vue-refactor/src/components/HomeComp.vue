@@ -64,14 +64,6 @@
         <br /><br />
         <h4>Steps to getting your own brood:</h4>
         <ol>
-          <!-- <li>
-                Coops and Runs for your area weather conditions.<a
-                  href="#"
-                  class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-                >
-                  Coops & Runs</a
-                >
-              </li> -->
           <li v-for="(stepObj, index) in stepsGetChickens" :key="index">
             {{ stepObj.step }}
             <a
@@ -82,38 +74,6 @@
             >
           </li>
         </ol>
-        <!-- <li>
-            Best breeds for the NW.<a
-              href="#"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >
-              Breeds</a
-            >
-          </li>
-          <li>
-            Source best feed that supplies what your ladies need.<a
-              href="#"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Feeds</a
-            >
-          </li>
-          <li>
-            Predators: what you need to know!<a
-              href="#"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >
-              Predators</a
-            >
-          </li>
-          <li>
-            Connect with other Chicken Lovers<a
-              href="#"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >
-              List of local groups</a
-            >
-          </li>
-        </ol> -->
         <img
           src="images/chickens-grazing-700.jpg"
           class="img-fluid py-5"
@@ -122,7 +82,47 @@
           height="467"
         />
       </article>
+      <aside class="my-3 col-xl-2 col-lg-4 col-sm-6 col-12">
+        <h3>New Breeds</h3>
+        <div
+          v-for="(newBreedsObj, index) in newBreeds"
+          :key="index"
+          class="card"
+        >
+          <img :src="newBreedsObj.imageSrc" :alt="newBreedsObj.altText" />;
+          <div class="card-body">
+            <p class="card-text">{{ newBreedsObj.cardText }}</p>
+            <a :href="newBreedsObj.url">{{ newBreedsObj.linkText }}</a>
+          </div>
+        </div>
+      </aside>
     </div>
+    <!-- //* Tooltip in this article *// -->
+    <article class="bg-body-tertiary p-3">
+      <h2>Latest Poultry News</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error
+        exercitationem amet, reiciendis delectus illum at ducimus reprehenderit
+        qui facilis iusto consectetur, voluptas natus aut vel deserunt est. Est,
+        natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+        eos! Optio aliquid veniam unde, reprehenderit vero maiores!
+        <a
+          href="#"
+          data-bs-toggle="tooltip"
+          data-bs-title="Link takes you offsite"
+          >Chicken Flu</a
+        >
+        This is now just filler, no killer. Content placed here just to mimic
+        the presence of
+        <a
+          href="#"
+          data-bs-toggle="tooltip"
+          data-bs-title="Link opens in a new tab"
+          >Poultry Vitamins</a
+        >Neque ducimus, officiis fugit sit, non dolorum blanditiis nulla ipsa
+        voluptates magnam quas!
+      </p>
+    </article>
   </div>
 </template>
 
@@ -151,6 +151,30 @@ const stepsGetChickens = ref([
     step: "Connect with other Chicken Lovers",
     url: "#",
     linkText: "List of local groups",
+  },
+]);
+
+const newBreeds = ref([
+  {
+    imgSrc: "images/chicken-thumbnail-350.jpg",
+    altText: "chicken",
+    cardText: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptas itaque enim quas praesentium porro sapiente quod, quibusdam molestias repudiandae.`,
+    url: "#",
+    linkText: "Sapphire Jewel",
+  },
+  {
+    imgSrc: "images/chicken-thumbnail-350.jpg",
+    altText: "chicken",
+    cardText: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptas itaque enim quas praesentium porro sapiente quod, quibusdam molestias repudiandae.`,
+    url: "#",
+    linkText: "Seramas",
+  },
+  {
+    imgSrc: "images/chicken-thumbnail-350.jpg",
+    altText: "chicken",
+    cardText: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptas itaque enim quas praesentium porro sapiente quod, quibusdam molestias repudiandae.`,
+    url: "#",
+    linkText: "Wheaten Olive Egger",
   },
 ]);
 </script>
