@@ -2,3 +2,28 @@
 @import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
 
 // You can create & import partials into this file or add additional global styles using scss //
+// Import partials here
+@import "base.normalize";
+@import "settings.variables";
+@import "settings.responsive";
+@import "components.content";
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion {
+  --bs-accordion-btn-bg: #a9efce;
+  --bs-accordion-active-bg: #198754;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}

@@ -25,16 +25,36 @@
         <div class="collapse navbar-collapse" id="mainNav">
           <ul class="navbar-nav nav-underline me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#/home">Home</a>
+              <a
+                class="nav-link"
+                :class="{ active: currentPath === '#/home' }"
+                href="#/home"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#/coops-runs">Coops & Runs</a>
+              <a
+                class="nav-link"
+                :class="{ active: currentPath === '#/coops-runs' }"
+                href="#/coops-runs"
+                >Coops & Runs</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#/breeds">Breeds</a>
+              <a
+                class="nav-link"
+                :class="{ active: currentPath === '#/breeds' }"
+                href="#/breeds"
+                >Breeds</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#/feeds">Feeds</a>
+              <a
+                class="nav-link"
+                :class="{ active: currentPath === '#/feeds' }"
+                href="#/feeds"
+                >Feeds</a
+              >
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -53,24 +73,80 @@
     </nav>
     <header class="header container-fluid bg-success p-3">
       <h1 class="display-1">NW Chickens</h1>
-      <h2>Girls Gone Wild!</h2>
     </header>
+
     <component :is="currentView" />
+
+    <footer class="footer bg-body-tertiary p-5">
+      <img
+        src="images/nw-chickens-rect-logo-250.jpg"
+        class="img-thumbnail"
+        alt=""
+        width="250"
+        height="150"
+      />
+      <div>
+        <ul class="list-unstyled">
+          <li>
+            <a
+              href="#/home"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#/coops-runs"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Coops & Runs</a
+            >
+          </li>
+          <li>
+            <a
+              href="#/breeds"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Breeds</a
+            >
+          </li>
+          <li>
+            <a
+              href="#/feeds"
+              class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Feeds</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="socials list-unstyled">
+          <li class="py-3">
+            <a href="#" class="link-success"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+          </li>
+          <li class="py-3">
+            <a href="#" class="link-success"
+              ><i class="fa-brands fa-instagram fa-2xl"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </main>
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
-import Home from "./components/Home.vue";
+import HomeComp from "./components/HomeComp.vue";
 import CoopsRuns from "./components/Coops-Runs.vue";
-import Breeds from "./components/Breeds.vue";
-import Feeds from "./components/Feeds.vue";
+import BreedsComp from "./components/BreedsComp.vue";
+import FeedsComp from "./components/FeedsComp.vue";
 
 const routes = {
-  "/home": Home,
+  "/home": HomeComp,
   "/coops-runs": CoopsRuns,
-  "/breeds": Breeds,
-  "/feeds": Feeds,
+  "/breeds": BreedsComp,
+  "/feeds": FeedsComp,
 };
 
 if (!window.location.hash) {
@@ -84,17 +160,8 @@ window.addEventListener("hashchange", () => {
 });
 
 const currentView = computed(() => {
-  return routes[currentPath.value.slice(1)] || Home;
+  return routes[currentPath.value.slice(1)] || HomeComp;
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
