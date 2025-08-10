@@ -1,4 +1,8 @@
 <template>
+  <header class="header container-fluid bg-success p-3">
+    <h1 class="display-1">NW Chickens</h1>
+    <h2>Feeds: Pellets & Crumbles</h2>
+  </header>
   <!-- //* Grid Content and Accordion *// -->
   <div class="container-fluid my-3">
     <div class="row">

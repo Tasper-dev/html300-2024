@@ -71,9 +71,6 @@
         </div>
       </div>
     </nav>
-    <header class="header container-fluid bg-success p-3">
-      <h1 class="display-1">NW Chickens</h1>
-    </header>
 
     <component :is="currentView" />
 

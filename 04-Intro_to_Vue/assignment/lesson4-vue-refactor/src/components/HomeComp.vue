@@ -1,11 +1,16 @@
 <template>
+  <header class="header container-fluid bg-success p-3">
+    <h1 class="display-1">NW Chickens</h1>
+    <h2>Girls gone wild!</h2>
+  </header>
+
   <div>
     <!-- //*Carousel*// -->
     <div id="homeCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="/images/chicken-carousel-one.jpg"
+            src="images/chicken-carousel-one.jpg"
             class="d-block w-100"
             alt="chickens"
           />
@@ -61,7 +66,8 @@
           laboriosam quo? Numquam ex accusamus officia? Vero distinctio nulla
           beatae.
         </p>
-        <br /><br />
+
+        <!-- //* V-for Loop for List *// -->
         <h4>Steps to getting your own brood:</h4>
         <ol>
           <li v-for="(stepObj, index) in stepsGetChickens" :key="index">
@@ -82,6 +88,8 @@
           height="467"
         />
       </article>
+
+      <!-- //* V-for Loop for Image cards *//-->
       <aside class="my-3 col-xl-2 col-lg-4 col-sm-6 col-12">
         <h3>New Breeds</h3>
         <div
@@ -89,7 +97,7 @@
           :key="index"
           class="card"
         >
-          <img :src="newBreedsObj.imageSrc" :alt="newBreedsObj.altText" />;
+          <img :src="newBreedsObj.imgSrc" :alt="newBreedsObj.altText" />
           <div class="card-body">
             <p class="card-text">{{ newBreedsObj.cardText }}</p>
             <a :href="newBreedsObj.url">{{ newBreedsObj.linkText }}</a>
@@ -97,6 +105,7 @@
         </div>
       </aside>
     </div>
+
     <!-- //* Tooltip in this article *// -->
     <article class="bg-body-tertiary p-3">
       <h2>Latest Poultry News</h2>
@@ -127,8 +136,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-
+import { ref, onMounted } from "vue";
+import * as bootstrap from "bootstrap";
 const stepsGetChickens = ref([
   {
     step: "Coops and Runs for your area weather conditions.",
@@ -177,6 +186,14 @@ const newBreeds = ref([
     linkText: "Wheaten Olive Egger",
   },
 ]);
+onMounted(() => {
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  [...tooltipTriggerList].forEach((tooltipTriggerEl) => {
+    new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

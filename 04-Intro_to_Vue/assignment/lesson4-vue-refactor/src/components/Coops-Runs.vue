@@ -1,4 +1,8 @@
 <template>
+  <header class="header container-fluid bg-success p-3">
+    <h1 class="display-1">NW Chickens</h1>
+    <h2>Coops & Runs</h2>
+  </header>
   <div class="container my-5">
     <div
       v-for="(coopsArticlesObj, index) in coopsArticles"
