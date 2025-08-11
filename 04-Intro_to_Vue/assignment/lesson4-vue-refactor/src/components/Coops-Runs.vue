@@ -4,6 +4,7 @@
     <h2>Coops & Runs</h2>
   </header>
   <div class="container my-5">
+    <!-- //* V-for Loop for Articles *// -->
     <div
       v-for="(coopsArticlesObj, index) in coopsArticles"
       :key="index"
@@ -11,7 +12,7 @@
     >
       <article class="col-xl-6 col-md-8 col-sm-10 col-12 bg-body-tertiary">
         <h3>{{ coopsArticlesObj.title }}</h3>
-        <p>{{ coopsArticlesObj.text }}</p>
+        <p style="white-space: pre-line">{{ coopsArticlesObj.text }}</p>
       </article>
     </div>
   </div>
@@ -30,7 +31,7 @@ const coopsArticles = ref([
               maiores amet itaque deserunt, ad voluptatem cupiditate quam
               suscipit. Reiciendis at expedita porro, vero delectus odio nobis
               sapiente corrupti a. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Explicabo sit velit quasi qui aspernatur vero,
+              adipisicing elit.\n Explicabo sit velit quasi qui aspernatur vero,
               reprehenderit, magni accusantium laudantium placeat quos, animi
               facere nobis ullam amet earum similique consectetur sed?\n Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Assumenda ipsum necessitatibus neque doloremque autem vel corporis
@@ -47,7 +48,7 @@ const coopsArticles = ref([
               maiores amet itaque deserunt, ad voluptatem cupiditate quam
               suscipit. Reiciendis at expedita porro, vero delectus odio nobis
               sapiente corrupti a. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Explicabo sit velit quasi qui aspernatur vero,
+              adipisicing elit.\n Explicabo sit velit quasi qui aspernatur vero,
               reprehenderit, magni accusantium laudantium placeat quos, animi
               facere nobis ullam amet earum similique consectetur sed?\n Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Assumenda ipsum necessitatibus neque doloremque autem vel corporis
@@ -64,7 +65,7 @@ const coopsArticles = ref([
               maiores amet itaque deserunt, ad voluptatem cupiditate quam
               suscipit. Reiciendis at expedita porro, vero delectus odio nobis
               sapiente corrupti a. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Explicabo sit velit quasi qui aspernatur vero,
+              adipisicing elit.\n Explicabo sit velit quasi qui aspernatur vero,
               reprehenderit, magni accusantium laudantium placeat quos, animi
               facere nobis ullam amet earum similique consectetur sed?\n Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Assumenda ipsum necessitatibus neque doloremque autem vel corporis

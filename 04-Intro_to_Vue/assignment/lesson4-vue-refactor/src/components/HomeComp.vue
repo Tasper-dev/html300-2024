@@ -52,42 +52,59 @@
   </div>
   <div class="container-fluid my-3">
     <div class="row">
-      <article
+      <section
         class="col-xl-10 col-lg-8 col-sm-6 col-12 bg-body-tertiary my-3 p-3"
       >
-        <h2>Intro Article</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta est
-          cupiditate veritatis molestiae deleniti, voluptate perferendis
-          perspiciatis eos consequatur nulla, in exercitationem reprehenderit?
-          Velit sit doloribus delectus quasi quod eius?Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Sapiente quia molestias architecto
-          vero quo? Possimus fugit accusantium similique, sapiente obcaecati
-          laboriosam quo? Numquam ex accusamus officia? Vero distinctio nulla
-          beatae.
-        </p>
-
+        <article>
+          <h2>Intro Article</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta est
+            cupiditate veritatis molestiae deleniti, voluptate perferendis
+            perspiciatis eos consequatur nulla, in exercitationem reprehenderit?
+            Velit sit doloribus delectus quasi quod eius?Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Sapiente quia molestias
+            architecto vero quo? Possimus fugit accusantium similique, sapiente
+            obcaecati laboriosam quo? Numquam ex accusamus officia? Vero
+            distinctio nulla beatae.
+          </p>
+        </article>
         <!-- //* V-for Loop for List *// -->
-        <h4>Steps to getting your own brood:</h4>
-        <ol>
-          <li v-for="(stepObj, index) in stepsGetChickens" :key="index">
-            {{ stepObj.step }}
-            <a
-              :href="stepObj.url"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >
-              {{ stepObj.linkText }}</a
-            >
-          </li>
-        </ol>
-        <img
-          src="images/chickens-grazing-700.jpg"
-          class="img-fluid py-5"
-          alt="chickens grazing"
-          width="700"
-          height="467"
-        />
-      </article>
+        <article>
+          <h4>Steps to getting your own brood:</h4>
+          <ol>
+            <li v-for="(stepObj, index) in stepsGetChickens" :key="index">
+              {{ stepObj.step }}
+              <a
+                :href="stepObj.url"
+                class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >
+                {{ stepObj.linkText }}</a
+              >
+            </li>
+          </ol>
+          <img
+            src="images/chickens-grazing-700.jpg"
+            class="img-fluid py-5"
+            alt="chickens grazing"
+            width="700"
+            height="467"
+          />
+        </article>
+        <!-- //* V-if, V-else for Button *// -->
+        <div class="p-5">
+          <button
+            type="button"
+            class="btn btn-success btn-lg"
+            @click="joke = !joke"
+          >
+            Fowl Joke of the Day
+          </button>
+          <p class="pt-2 fw-bolder" v-if="joke">
+            What's a chickens favorite trilogy?
+          </p>
+          <p class="pt-2 fw-bolder" v-else>Lord of the Wings.</p>
+        </div>
+      </section>
 
       <!-- //* V-for Loop for Image cards *//-->
       <aside class="my-3 col-xl-2 col-lg-4 col-sm-6 col-12">
@@ -100,7 +117,11 @@
           <img :src="newBreedsObj.imgSrc" :alt="newBreedsObj.altText" />
           <div class="card-body">
             <p class="card-text">{{ newBreedsObj.cardText }}</p>
-            <a :href="newBreedsObj.url">{{ newBreedsObj.linkText }}</a>
+            <a
+              :href="newBreedsObj.url"
+              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >{{ newBreedsObj.linkText }}</a
+            >
           </div>
         </div>
       </aside>
@@ -128,7 +149,8 @@
           data-bs-toggle="tooltip"
           data-bs-title="Link opens in a new tab"
           >Poultry Vitamins</a
-        >Neque ducimus, officiis fugit sit, non dolorum blanditiis nulla ipsa
+        >
+        Neque ducimus, officiis fugit sit, non dolorum blanditiis nulla ipsa
         voluptates magnam quas!
       </p>
     </article>
@@ -157,7 +179,7 @@ const stepsGetChickens = ref([
     linkText: "Predators",
   },
   {
-    step: "Connect with other Chicken Lovers",
+    step: "Connect with other chicken lovers.",
     url: "#",
     linkText: "List of local groups",
   },
@@ -194,6 +216,8 @@ onMounted(() => {
     new bootstrap.Tooltip(tooltipTriggerEl);
   });
 });
+
+const joke = ref(true);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -133,6 +133,7 @@
 </template>
 
 <script setup>
+//* Nav Router *//
 import { ref, computed } from "vue";
 import HomeComp from "./components/HomeComp.vue";
 import CoopsRuns from "./components/Coops-Runs.vue";

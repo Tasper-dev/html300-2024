@@ -3,7 +3,7 @@
     <h1 class="display-1">NW Chickens</h1>
     <h2>Feeds: Pellets & Crumbles</h2>
   </header>
-  <!-- //* Grid Content and Accordion *// -->
+  <!-- //* Grid Content *// -->
   <div class="container-fluid my-3">
     <div class="row">
       <article class="col-12 col-md-8 bg-body-tertiary p-3">
@@ -33,6 +33,8 @@
     <div class="row">
       <article class="col-12 col-md-8 bg-body-tertiary p-3">
         <h3>Best Feeds Based on Age</h3>
+
+        <!-- //* V-for loop for Accordion *// -->
         <div class="accordion" id="accordionFeeds">
           <div
             v-for="(feedAccordionObj, index) in feedAccordion"

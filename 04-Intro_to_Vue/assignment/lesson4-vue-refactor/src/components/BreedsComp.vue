@@ -3,9 +3,11 @@
     <h1 class="display-1">NW Chickens</h1>
     <h2>Breeds A-Z</h2>
   </header>
+
   <!-- //* Grid Content: Responsive Images*// -->
   <section class="container my-3">
     <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- //* V-for List of Image Cards *// -->
       <div
         v-for="(breedsListObj, index) in breedsList"
         :key="index"
