@@ -1,6 +1,12 @@
 <template>
-  <div class="image-card">
-    <img class="card-img-top" :src="props.imageSrc" :alt="props.alt" />
+  <div class="card image-card">
+    <img
+      class="card-img-top"
+      :class="{ 'border border-dark': showBorder }"
+      @click="clickBorder"
+      :src="props.imageSrc"
+      :alt="props.alt"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ props.title }}</h5>
       <p class="card-text">{{ props.cardText }}</p>
@@ -10,7 +16,7 @@
 </template>
 <script setup>
 import { defineProps } from "vue";
-
+import { toggleBorder } from "../composables/toggleBorder.js";
 const props = defineProps({
   imageSrc: {
     type: String,
@@ -25,5 +31,7 @@ const props = defineProps({
   url: String,
   linkText: String,
 });
+
+const { showBorder, clickBorder } = toggleBorder();
 </script>
 <style scoped></style>

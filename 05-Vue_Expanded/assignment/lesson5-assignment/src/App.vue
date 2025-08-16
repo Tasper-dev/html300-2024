@@ -139,6 +139,7 @@ import HomeComp from "./components/HomeComp.vue";
 import CoopsRuns from "./components/Coops-Runs.vue";
 import BreedsComp from "./components/BreedsComp.vue";
 import FeedsComp from "./components/FeedsComp.vue";
+// import HeaderComp from "./components/HeaderComp.vue";
 
 const routes = {
   "/home": HomeComp,
