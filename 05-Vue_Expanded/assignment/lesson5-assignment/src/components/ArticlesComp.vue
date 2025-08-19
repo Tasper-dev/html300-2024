@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="article">
     <h3>{{ props.title }}</h3>
     <p>{{ props.text }}</p>
   </article>
@@ -17,4 +17,9 @@ const props = defineProps({
   },
 });
 </script>
-<style scoped></style>
+<style scoped>
+.article {
+  border: 2px solid lightgreen;
+  padding: 1rem;
+}
+</style>

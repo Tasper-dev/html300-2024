@@ -11,13 +11,13 @@
       v-for="(coopsArticlesObj, index) in coopsArticles"
       :key="index"
       class="row mb-4"
-      :customClass="coopsArticlesObj.customClass"
+      :class="coopsArticlesObj.customClass"
     >
       <!-- //Add Article Component // -->
       <div class="col-xl-6 col-md-8 col-sm-10 col-12">
         <ArticlesComp
-          :title="ArticlesComp.title"
-          :text="ArticlesComp.text"
+          :title="coopsArticlesObj.title"
+          :text="coopsArticlesObj.text"
         ></ArticlesComp>
       </div>
     </div>
