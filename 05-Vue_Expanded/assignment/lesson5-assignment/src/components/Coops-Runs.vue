@@ -18,6 +18,7 @@
         <ArticlesComp
           :title="coopsArticlesObj.title"
           :text="coopsArticlesObj.text"
+          class="article"
         ></ArticlesComp>
       </div>
     </div>
@@ -82,4 +83,12 @@ const coopsArticles = ref([
   },
 ]);
 </script>
-<style></style>
+<style>
+.article {
+  transition: all 0.3s ease;
+  &:hover {
+    border: 2px solid #adb5bd;
+    border-radius: 5px;
+  }
+}
+</style>

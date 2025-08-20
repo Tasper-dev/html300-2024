@@ -56,7 +56,7 @@
       <section
         class="col-xl-10 col-lg-8 col-sm-6 col-12 bg-body-tertiary my-3 p-3"
       >
-        <article>
+        <article class="p-5">
           <h2>Intro Article</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta est
@@ -71,7 +71,7 @@
         </article>
 
         <!-- //* V-for Loop for List *// -->
-        <article>
+        <article class="p-5">
           <h4>Steps to getting your own brood:</h4>
           <ol>
             <li v-for="(stepObj, index) in stepsGetChickens" :key="index">
@@ -93,7 +93,7 @@
           />
         </article>
         <!-- //* V-if, V-else for Button *// -->
-        <div class="p-2">
+        <div class="p-5">
           <button
             type="button"
             class="btn btn-success btn-lg"

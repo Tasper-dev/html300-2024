@@ -7,7 +7,7 @@
 
   <div class="container-fluid my-3">
     <div class="row">
-      <div class="col-12 col-md-8 bg-body-tertiary p-3">
+      <div class="col-12 col-md-8 bg-body-tertiary p-5">
         <!-- // Article Component used with a V-for loop // -->
         <ArticlesComp
           v-for="(feedsArticleObj, index) in feedsArticle"
@@ -26,22 +26,15 @@
     </div>
     <!-- //* Accordion component with v-for loop *// -->
     <div class="row">
-      <article class="col-12 col-md-8 bg-body-tertiary p-3">
+      <article class="col-12 col-md-8 bg-body-tertiary p-5">
         <h3>Best Feeds Based on Age</h3>
-        <AccordionComp
-          :id="feedAccordionObj.id"
-          v-for="(feedAccordionObj, index) in feedAccordion"
-          :key="index"
-          :data-bs-target="feedAccordionObj.dataTarg"
-          :aria-expanded="feedAccordionObj.ariaExpand"
-          :aria-controls="feedAccordionObj.ariaControl"
-          :btnText="feedAccordionObj.btnText"
-          :accBodyId="feedAccordionObj.accBodyId"
-          :accClass="feedAccordionObj.accClass"
-          :parent="feedAccordionObj.parent"
-          :accTitle="feedAccordionObj.accTitle"
-          :accBody="feedAccordionObj.accBody"
-        ></AccordionComp>
+        <div class="accordion" id="accordionFeeds">
+          <AccordionComp
+            v-for="(feedAccordionObj, index) in feedAccordion"
+            :key="index"
+            v-bind="feedAccordionObj"
+          ></AccordionComp>
+        </div>
       </article>
     </div>
   </div>
@@ -66,7 +59,6 @@ const feedsArticle = ref([
 
 const feedAccordion = ref([
   {
-    id: "accordionFeeds",
     dataTarg: "#collapseOne",
     ariaExpand: "true",
     ariaControl: "collapseOne",
@@ -86,7 +78,6 @@ const feedAccordion = ref([
                     blanditiis unde?`,
   },
   {
-    id: "accordionFeeds",
     dataTarg: "#collapseTwo",
     ariaExpand: "false",
     ariaControl: "collapseTwo",
@@ -106,7 +97,6 @@ const feedAccordion = ref([
                     blanditiis unde?`,
   },
   {
-    id: "accordionFeeds",
     dataTarg: "#collapseThree",
     ariaExpand: "false",
     ariaControl: "collapseThree",
