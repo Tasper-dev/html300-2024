@@ -4,9 +4,7 @@
     <slot name="subheader"></slot>
   </header>
 </template>
-<script setup>
-// No script needed for this component
-</script>
+<script setup></script>
 <style scoped>
 .header {
   background: #198754;

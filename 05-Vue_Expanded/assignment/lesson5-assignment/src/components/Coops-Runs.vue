@@ -13,7 +13,7 @@
       class="row mb-4"
       :class="coopsArticlesObj.customClass"
     >
-      <!-- //Add Article Component // -->
+      <!-- // Article Component // -->
       <div class="col-xl-6 col-md-8 col-sm-10 col-12">
         <ArticlesComp
           :title="coopsArticlesObj.title"
