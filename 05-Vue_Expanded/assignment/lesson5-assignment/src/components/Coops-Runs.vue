@@ -85,6 +85,7 @@ const coopsArticles = ref([
 </script>
 <style>
 .article {
+  padding: 1rem;
   transition: all 0.3s ease;
   &:hover {
     border: 2px solid #adb5bd;

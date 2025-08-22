@@ -12,9 +12,9 @@
   background: #198754;
   background: linear-gradient(
     90deg,
-    rgba(25, 135, 84, 1) 26%,
-    rgba(37, 201, 125, 1) 78%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(25, 135, 84, 1) 0%,
+    rgba(37, 201, 125, 1) 49%,
+    rgba(25, 135, 84, 1) 100%
   );
 }
 </style>

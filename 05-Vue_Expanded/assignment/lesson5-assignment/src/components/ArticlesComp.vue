@@ -19,6 +19,6 @@ const props = defineProps({
 </script>
 <style scoped>
 .article {
-  padding: 1rem;
+  padding: 2rem;
 }
 </style>
